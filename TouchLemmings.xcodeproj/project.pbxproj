@@ -11,6 +11,12 @@
 		4E9416F01DFC82D00009BA55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9416EF1DFC82D00009BA55 /* ViewController.swift */; };
 		4E9416F21DFC82D00009BA55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9416F11DFC82D00009BA55 /* Assets.xcassets */; };
 		4E9416F51DFC82D00009BA55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9416F31DFC82D00009BA55 /* Main.storyboard */; };
+		4E9416FD1DFC83A80009BA55 /* LemmingsCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9416FC1DFC83A80009BA55 /* LemmingsCanvas.swift */; };
+		4E9417011DFC94A60009BA55 /* SpriteLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9417001DFC94A60009BA55 /* SpriteLoader.swift */; };
+		4E9417031DFD180D0009BA55 /* LemmingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9417021DFD180D0009BA55 /* LemmingsScene.swift */; };
+		4E9417051DFD19550009BA55 /* Lemming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9417041DFD19550009BA55 /* Lemming.swift */; };
+		4E9417071DFD44C50009BA55 /* Atlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E9417061DFD44C50009BA55 /* Atlas.plist */; };
+		4E9417091DFD840B0009BA55 /* sprites.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E9417081DFD840B0009BA55 /* sprites.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,12 @@
 		4E9416F11DFC82D00009BA55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E9416F41DFC82D00009BA55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E9416F61DFC82D00009BA55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E9416FC1DFC83A80009BA55 /* LemmingsCanvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LemmingsCanvas.swift; sourceTree = "<group>"; };
+		4E9417001DFC94A60009BA55 /* SpriteLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteLoader.swift; sourceTree = "<group>"; };
+		4E9417021DFD180D0009BA55 /* LemmingsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LemmingsScene.swift; sourceTree = "<group>"; };
+		4E9417041DFD19550009BA55 /* Lemming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lemming.swift; sourceTree = "<group>"; };
+		4E9417061DFD44C50009BA55 /* Atlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Atlas.plist; sourceTree = "<group>"; };
+		4E9417081DFD840B0009BA55 /* sprites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sprites.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,12 @@
 			children = (
 				4E9416ED1DFC82D00009BA55 /* AppDelegate.swift */,
 				4E9416EF1DFC82D00009BA55 /* ViewController.swift */,
+				4E9416FC1DFC83A80009BA55 /* LemmingsCanvas.swift */,
+				4E9417021DFD180D0009BA55 /* LemmingsScene.swift */,
+				4E9417041DFD19550009BA55 /* Lemming.swift */,
+				4E9417001DFC94A60009BA55 /* SpriteLoader.swift */,
+				4E9417061DFD44C50009BA55 /* Atlas.plist */,
+				4E9417081DFD840B0009BA55 /* sprites.png */,
 				4E9416F11DFC82D00009BA55 /* Assets.xcassets */,
 				4E9416F31DFC82D00009BA55 /* Main.storyboard */,
 				4E9416F61DFC82D00009BA55 /* Info.plist */,
@@ -120,7 +138,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E9417091DFD840B0009BA55 /* sprites.png in Resources */,
 				4E9416F21DFC82D00009BA55 /* Assets.xcassets in Resources */,
+				4E9417071DFD44C50009BA55 /* Atlas.plist in Resources */,
 				4E9416F51DFC82D00009BA55 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,7 +153,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E9416F01DFC82D00009BA55 /* ViewController.swift in Sources */,
+				4E9417031DFD180D0009BA55 /* LemmingsScene.swift in Sources */,
 				4E9416EE1DFC82D00009BA55 /* AppDelegate.swift in Sources */,
+				4E9416FD1DFC83A80009BA55 /* LemmingsCanvas.swift in Sources */,
+				4E9417011DFC94A60009BA55 /* SpriteLoader.swift in Sources */,
+				4E9417051DFD19550009BA55 /* Lemming.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,10 +269,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TouchLemmings/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.traduko.TouchLemmings;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.TouchLemmings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -258,10 +284,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TouchLemmings/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.traduko.TouchLemmings;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.TouchLemmings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -286,6 +314,7 @@
 				4E9416FB1DFC82D00009BA55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
