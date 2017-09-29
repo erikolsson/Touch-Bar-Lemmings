@@ -2,3 +2,13 @@
 ![screenshot](https://github.com/erikolsson/Touch-Bar-Lemmings/blob/master/media/screenshot.jpg?raw=true)
 
 Proof of concept.. but why not!
+
+# Build & run
+
+```
+xcodebuild clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+# If the build fails on TouchLemmings/LemmingsScene.swift
+# Update this file and change the minimal version of Mac OS X
+open build/Release/TouchLemmings.app
+
+```
