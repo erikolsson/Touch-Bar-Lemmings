@@ -12,3 +12,7 @@ xcodebuild clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 open build/Release/TouchLemmings.app
 
 ```
+
+# Spawn lemmings
+
+Just hit the touch bar while the application is in the foreground. Tapping a lemming will transform it into a blocker.
