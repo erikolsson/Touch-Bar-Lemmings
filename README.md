@@ -15,4 +15,4 @@ open build/Release/TouchLemmings.app
 
 # Spawn lemmings
 
-Just hit the touch bar while the application is in the foreground. Tapping a lemming will transform it into a blocker.
+Just hit the touch bar while the application is in the foreground. Tapping a walking lemming will transform it into a blocker. Tapping a floating lemming will cause it to land and start walking. Long press to clear the screen and start over.
