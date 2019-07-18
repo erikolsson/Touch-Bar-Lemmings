@@ -10,7 +10,7 @@ import Cocoa
 import SpriteKit
 
 class LemmingsCanvas: SKView {
-  
+
   override func awakeFromNib() {
     super.awakeFromNib()
     let scene = LemmmingsScene(size: frame.size)
@@ -20,15 +20,15 @@ class LemmingsCanvas: SKView {
     scene.physicsWorld.gravity = CGVector.init(dx: 0, dy: 0)
     scene.physicsWorld.contactDelegate = scene
   }
-  
+
   override func touchesBegan(with event: NSEvent) {
     scene?.touchesBegan(with: event)
   }
-  
+
   override func touchesMoved(with event: NSEvent) {
     scene?.touchesMoved(with: event)
   }
-  
+
   override func touchesEnded(with event: NSEvent) {
     scene?.touchesEnded(with: event)
   }

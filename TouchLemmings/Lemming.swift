@@ -11,7 +11,7 @@ import SpriteKit
 enum Direction {
   case left
   case right
-  
+
   func theOtherDirection () -> Direction {
     switch self {
     case .left:
@@ -46,7 +46,7 @@ enum State {
 
 
 class Lemming: SKSpriteNode {
-  
+
   static let walkingCategory: UInt32 = 0x1 << 1;
   static let blockingCategory: UInt32 = 0x1 << 2;
   static let fallingCategory: UInt32 = 0x1 << 3;
@@ -64,11 +64,11 @@ class Lemming: SKSpriteNode {
       case .jumping:
         jump()
       }
-      
+
       size = state.size
     }
   }
-  
+
   func toggleState() {
     switch state {
     case .walking:
@@ -81,11 +81,11 @@ class Lemming: SKSpriteNode {
       state = .walking(direction: .right)
     }
   }
-  
+
   func freezeFrame() {
     removeAllActions()
   }
-  
+
   func walk(direction: Direction) {
     removeAllActions()
     let textures = SpriteLoader.loadWalkingTextures()
@@ -97,25 +97,25 @@ class Lemming: SKSpriteNode {
     xScale = reverse ? -1 : 1
     run(walkAction)
     run(moveAction)
-    
+
     physicsBody?.categoryBitMask = Lemming.walkingCategory
     physicsBody?.contactTestBitMask = Lemming.blockingCategory
     physicsBody?.collisionBitMask = Lemming.blockingCategory
   }
-  
+
   func block() {
     removeAllActions()
-    
+
     let textures = SpriteLoader.loadBlockingTextures()
     let animate = SKAction.animate(with: textures, timePerFrame: 0.1)
     let blockAction = SKAction.repeatForever(SKAction.group([animate, animate.reversed()]))
-    
+
     run(blockAction)
-    
+
     physicsBody?.categoryBitMask = Lemming.blockingCategory
     physicsBody?.contactTestBitMask = Lemming.walkingCategory
     physicsBody?.collisionBitMask = Lemming.walkingCategory
-    
+
   }
   
   func fall() {
