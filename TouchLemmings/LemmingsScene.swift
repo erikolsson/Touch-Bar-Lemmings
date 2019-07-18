@@ -92,8 +92,10 @@ class LemmmingsScene: SKScene, SKPhysicsContactDelegate {
         else {
           addLemming(at: location)
         }
+
       }
     }
   }
 
 }
+

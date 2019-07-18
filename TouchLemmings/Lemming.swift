@@ -82,16 +82,12 @@ class Lemming: SKSpriteNode {
     }
   }
 
-  func freezeFrame() {
-    removeAllActions()
-  }
-
   func walk(direction: Direction) {
     removeAllActions()
     let textures = SpriteLoader.loadWalkingTextures()
     let animate = SKAction.animate(with: textures, timePerFrame: 0.1)
     let walkAction = SKAction.repeatForever(animate)
-    
+
     let reverse = direction == .right
     let moveAction = SKAction.moveBy(x: reverse ? 1000 : -1000, y: 0, duration: 60)
     xScale = reverse ? -1 : 1
