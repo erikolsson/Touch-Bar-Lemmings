@@ -30,5 +30,12 @@ struct SpriteLoader {
   static func loadBlockingTextures() -> [SKTexture] {
     return loadAnimation(name: "block")
   }
-
+  
+  static func loadFallingTextures() -> [SKTexture] {
+    return loadAnimation(name: "fall")
+  }
+  
+  static func loadJumpingTextures() -> [SKTexture] {
+    return loadAnimation(name: "jump")
+  }
 }
