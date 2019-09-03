@@ -38,13 +38,13 @@ class LemmmingsScene: SKScene, SKPhysicsContactDelegate {
   func addLemming(at: CGPoint) {
     let l = Lemming()
     scene?.addChild(l)
-    l.position = at
-    l.state = .walking(direction: .left)
-    
-    let shouldFall = arc4random_uniform(2) != 0
-    if shouldFall {
+
+    if Bool.random() {
       l.position = CGPoint(x: at.x, y: 40)
       l.state = .falling
+    } else {
+      l.position = at
+      l.state = .walking(direction: .left)
     }
     
     lemmings.append(l)
